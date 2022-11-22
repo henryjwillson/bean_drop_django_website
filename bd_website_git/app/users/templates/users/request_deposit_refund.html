@@ -1,0 +1,56 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <div class="content-section">
+    <form method="post">
+      {% csrf_token %}       <! Token required as part of additional security for django to protect from certain attacks >
+        <legend class = "border-bottom mb-4">Request a refund of deposits from your account</legend>
+        <div class="border-bottom mb-4">
+          <p>By requesting a refund on your cup deposits, we will freeze the value of cup deposits for a period of 72 hours.
+            During this period we will validate that the cups you have returned to Bean Drop, are un-damaged and ready for further use.
+          </p>
+          <p>Once this is comfirmed we will send you a secure email link to our <a href="https://stripe.com/gb/customers">Stripe Banking Client</a>
+           to complete a bank transfer to the bank account of your choice.</p>
+          <p class=""><span class="fst-italic text-secondary">Stripe Banking is a secure e-commerce platform registered with the Financial Services Authority</span></p>
+        </div>
+        <div class="container border-bottom mb-4 row align-items-center ">
+          <div class="text-center col-auto" style="vertical-align: middle">
+            <h3>CUP</h3>
+            <h3>DEPOSITS</h3>
+          </div>
+          <div class="col-auto">
+            <div class="row1of3">
+              <button type="button" class="btn btn-outline-primary" name="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                  <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="row2of3" style="vertical-align: middle">
+              <h1 class="text-center" >0</h1>
+            </div>
+            <div class="row3of3">
+              <button type="button" class="btn btn-outline-primary mb-4" name="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                  <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="col" style="vertical-align: middle">
+            <p class="text-center">You are requesting a refund of <strong>{{ user.profile.beandrop_cups_in_ownership }}</strong> cup deposits with a value of <strong>£{{ user.profile.beandrop_user_funds }}</strong>. If your cups have been
+              returned un-damaged successfully we will send you a link to collect your refund within 72 hours</p>
+          </div>
+
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-info" name="process_refund_request_to_stripe">Request refund</button>
+        </div>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+
+  </script>
+
+
+{% endblock content %}

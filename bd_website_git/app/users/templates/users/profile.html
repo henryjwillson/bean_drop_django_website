@@ -1,0 +1,34 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% load qr_code %}
+{% block content %}
+  <div class="content-section">
+    <div class="media">
+      <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+      <div class="media-body">
+        <h2 class="account-heading">{{ user.username }}</h2>
+        <p class="text-secondary">{{user.email}}</p>
+      </div>
+      <div>{% qr_from_text user.profile.beandrop_social_user_uuid size="T" image_format="png" %}</div>
+    </div>
+    <div class="content-section">
+      <p>Deposit funds: <span>£{{ user.profile.beandrop_user_funds }}</span></p>
+      <p>Cups currently owned: <span>{{ user.profile.beandrop_cups_in_ownership }}</span></p>
+      <a type="submit" class="btn btn-outline-danger" name="request_deposit_refund_stripe_redirect_button" href="{% url 'request_deposit_refund' %}">Request Deposit Refund</a>
+      <a type="submit" class="btn btn-outline-info" name="update_stripe_payment_redirect_button" href="{% url 'setup_payment_account' %}">Update Payment Options</a>
+      <a type="submit" class="btn btn-outline-secondary" name="view_stripe_account_dashboard_button" href="{% url 'stripe_dash_redirect' %}">View Stripe Account</a>
+    </div>
+  <!-- FORM HERE -->
+    <form method="post" enctype="multipart/form-data">    <! must place n enctype to encode form to be able to pass images through form successfully>
+      {% csrf_token %}       <! Token required as part of additional security for django to protect from certain attacks >
+      <fieldset class = "form-group">
+        <legend class = "border-bottom mb-4">Profile Info</legend>
+        {{ u_form|crispy }}
+        {{ p_form|crispy }}
+      </fieldset>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-info" name="user_submit_button">Update</button>
+        </div>
+    </form>
+  </div>
+{% endblock content %}

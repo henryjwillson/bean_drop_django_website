@@ -1,0 +1,304 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$g1fgSMTaxZWjtVMX0MlKRI$Z8FKdxJRJUN6ZgXWGEZNWE1nB9tDo7aeyvIpBZrZHFM=",
+    "last_login": "2022-09-05T18:29:47.815Z",
+    "is_superuser": true,
+    "username": "BeanDropHenry",
+    "first_name": "",
+    "last_name": "",
+    "email": "beandrop.company@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-09-05T09:12:02.348Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$8oVfbWdptbAZlWNK4F1ZYE$vFww6y7MBhAa0VBNxuYTP2CqhswrhfC32/XtHqX7F9U=",
+    "last_login": "2022-09-05T13:56:54.572Z",
+    "is_superuser": false,
+    "username": "NewUser2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-09-05T09:28:41.692Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$ZjlnchO93CmIPaLdkXfBFi$jK8Exj7yT0i21eCNh+VIpzVha6IdTbxxWe7MRkZsCEs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "NewUser3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-09-05T10:13:37.544Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$OkCPMKqL9IC14LsdCvdgEb$QKsfS9kb7qdq/6N0zwuQSBa3nB650EDJXN0nzadN+q8=",
+    "last_login": "2022-09-05T14:11:29.176Z",
+    "is_superuser": false,
+    "username": "TestUser5",
+    "first_name": "",
+    "last_name": "",
+    "email": "testuser5@company.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-09-05T14:11:08.847Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "enz7jt530xxkar6lj85rz719d20dp7er",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pCZlknBpXvPQIYy2KqBpLSrxrtLky50-997f1eet3XyW5XFz1FdFarL7xZ4fEk-QHxyfhQ9lrwuc9CHok9a9b1Eed9O9-9g4jq1muyAjgeg5KwziIYNkUUIgK4PCQTBCJCR0IN0zWHuYkeGJPWhMfX5AqHtNnE:1oVGqx:-lKlQFTQ-MehSBTCZ26k_xh9ERCS-XzbmME907DXj5Q",
+    "expire_date": "2022-09-19T18:29:47.985Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-09-05T09:28:42.125Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "NewUser2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-09-05T09:42:26.032Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "blog",
+      "post"
+    ],
+    "object_id": "1",
+    "object_repr": "Test Post 1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-09-05T12:48:15.723Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "users",
+      "profile"
+    ],
+    "object_id": "3",
+    "object_repr": "BeanDropHenry Profile",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-09-05T12:48:51.783Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "users",
+      "profile"
+    ],
+    "object_id": "4",
+    "object_repr": "NewUser2 Profile",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-09-05T12:49:12.813Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "users",
+      "profile"
+    ],
+    "object_id": "5",
+    "object_repr": "NewUser3 Profile",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-09-05T12:49:23.881Z",
+    "user": [
+      "BeanDropHenry"
+    ],
+    "content_type": [
+      "users",
+      "profile"
+    ],
+    "object_id": "4",
+    "object_repr": "NewUser2 Profile",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 1,
+  "fields": {
+    "title": "Test Post 1",
+    "content": "Content of our first Post",
+    "date_posted": "2022-09-05T09:42:08Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/Colour_conversion_bean_drop_promotional_photo_x5Mjnsm.png"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 2,
+  "fields": {
+    "title": "Second Test Post",
+    "content": "Content of second test post",
+    "date_posted": "2022-09-06T09:35:48.129Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/Copy_of_Copy_of_DSC_7801.jpg"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 3,
+  "fields": {
+    "title": "Welcome to the Bean Drop",
+    "content": "Welcome to the New Bean Drop website! As you might have noticed, there have been a few changes around here at www.beandrop.net. Over the past month, we have been hard at work redeveloping our website to work better for our customers. \r\n\r\nWe have taken on feedback from our old design and added and updated features across the website. The upgrades include your personal profile page, updates and news info from Bean Drop, and links to our social media. \r\n\r\nWe're not done yet! Over the next few months, we will be continuing to develop and work upon beandrop.net, and we will continue to update you as we release new features. \r\n\r\nKind regards,\r\nBean Drop Team",
+    "date_posted": "2022-09-06T13:06:40.354Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/Colour_conversion_bean_drop_promotional_photo_czHRIWc.png"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 4,
+  "fields": {
+    "title": "Saving water by using and washing reusable cups!",
+    "content": "Did you know Bean Drop reusable cups reduce the water consumption of takeaway drinks by over 76%? That's right, even though the cups are thoroughly washed after every use, they will still use 76% less water over their lifecycle when compared to a single-use plastic-lined paper coffee cup! \r\n\r\nWhy's that you might ask? With modern dishwashers, cleaning Bean Drop cups uses very little water, whilst a single-use takeaway cup uses vast amounts of water in its original manufacturing process! So whilst Bean Drop cups use water after each use for cleaning, you can be confident they use far less water than a normal single-use coffee cup, and at the same time, the Bean Drop cups are reducing carbon emissions.",
+    "date_posted": "2022-09-06T13:18:45.287Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/flowing_river.jpg"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 5,
+  "fields": {
+    "title": "Bean Drop Donates 10% of Profits to Charity",
+    "content": "10% of all Bean Drop Profits are donated to charities helping build a more sustainable future. Each year Bean Drop will put 5% of its profits towards our chosen global charity whilst the remaining 5% of profits will go towards local charities in the Bean Drop community areas. By using Bean Drop reusable cups, you will be directly contributing to your local community!\r\n\r\nChoosing to use Bean Drop cups means you are helping to reduce CO2 emissions and reduce water consumption all at the same time as giving back to the sustainable community!",
+    "date_posted": "2022-09-06T13:26:28.183Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/paul-summers-ArtVJ-217Cw-unsplash.jpg"
+  }
+},
+{
+  "model": "blog.post",
+  "pk": 6,
+  "fields": {
+    "title": "The Bean Drop Revolution",
+    "content": "Bean drop is a revolution in the way we have our takeaway coffee. Customers receive their coffee* in reusable cups instead of the single-use plastic-lined takeaway cups that most cafes currently offer. By using reusable cups, customers can return their cups once they are finished, reducing landfill waste, C02 emissions, and water waste compared to a single-use coffee cup.\r\n\r\nBean Drop will wash the cups so customers don't have to; combining the convenience of single-use coffee cups with the environmentally friendly nature of a reusable cup.\r\n\r\nIt won't cost you a penny more and you'll be saving the environment!\r\n\r\nBean Drop can collect, clean, and distribute coffee cups for the exact same price as single-use coffee cups! As a customer, you won't pay a penny extra for your cup of coffee! And whilst you enjoy your favourite coffee in our uniquely identifiable reusable cups, you can be happy in the knowledge you've helped reduce CO2 emissions by 96%! In fact even though we will wash the cups after every use, you will still reduce the total water usage of cups by 76% when using a Bean Drop cup compared with a normal single-use cup.",
+    "date_posted": "2022-09-06T13:32:04.160Z",
+    "author": [
+      "BeanDropHenry"
+    ],
+    "header_image": "post_pics/Colour_conversion_bean_drop_promotional_photo_iHl5G3m.png"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "BeanDropHenry"
+    ],
+    "image": "profile_pics/1._First_Logo_PNG.png"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "NewUser2"
+    ],
+    "image": "profile_pics/BigLogoBitMap.bmp"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "NewUser3"
+    ],
+    "image": "profile_pics/BigLogoBitMap_jjVhLoY.bmp"
+  }
+},
+{
+  "model": "users.profile",
+  "pk": 6,
+  "fields": {
+    "user": [
+      "TestUser5"
+    ],
+    "image": "default.jpg"
+  }
+}
+]

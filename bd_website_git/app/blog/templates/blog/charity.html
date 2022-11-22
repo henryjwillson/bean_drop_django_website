@@ -1,0 +1,50 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center px-3 py-2 mb-4" style="background-color:#7BDCB5; border-radius:25px">
+  <p class="align-middle" style="font-family: 'Comfortaa'; font-size:200%">Bean Drop is committed to giving back 10% of profits.</p>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/green_river.jpg' %}); background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span>5% of Bean Drop Profits will go to causes helping to make our planet green</span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-center align-middle align-items-center" style="vertical-align: middle">
+    <p>This year 5% of Bean Drop Profits will go to Ecologi to help plant trees and fund the world’s best climate crisis solutions. For more information on Ecologi click below.</p>
+    <a href="https://ecologi.com/"><button class="btn btn-outline-success" type="button" name="button">Find out more</button></a>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2  px-3" style="border-radius:25px">
+  <div class="title-container col">
+    <div class="text-center img-hover-zoom" style="border-radius:25px">
+      <img class="img-fluid" src="{% static 'blog/tricycle.jpg' %}" alt="Green River">
+      <p class="carousel-caption" style="font-family: 'Comfortaa'; font-size:200%">5% of Bean Drop Profits will go back to our local communities</p>
+    </div>
+  </div>
+
+  <div class="col text-center align-middle align-items-center" style="vertical-align: middle">
+    <p>Bean Drop will be made up of local teams coming together to reduce our waste and we want local teams to see the benefits.
+       5% of Bean Drop profits will go back into the local community through charities sponsoring kids getting into cycling.
+        We want to spread our love of cycling!</p>
+    <a href="https://ecologi.com/"><button class="btn btn-outline-success" type="button" name="button">Find out more</button></a>
+  </div>
+</div>
+
+{% endblock content %}
+
+style="object-fit:cover; object-position: 50% 50%;
+
+<div class="title-container mb-2 mt-2" >
+    <img class="img-fluid" src="{% static 'blog/green_river.jpg' %}" alt="Green River" style="border-radius:25px">
+    <div class="title-text-block">
+      <span style="font-family: 'Comfortaa'; font-size:200%; background-color: white">5% of Bean Drop Profits will go to causes helping to make our planet green</span>
+    </div>
+
+</div>

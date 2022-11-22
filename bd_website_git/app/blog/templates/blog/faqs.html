@@ -1,0 +1,127 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center px-3 py-2 mb-4" style="background-color:#7BDCB5; border-radius:25px">
+  <p class="align-middle" style="font-family: 'Comfortaa'; font-size:200%">Frequently asked questions</p>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/stock_image_serving_coffee.png' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Why should I use Bean Drop?</h2>
+    <p>Because you’re a superstar who wants to look after the next generation! 
+      You’ll be reducing landfill, CO2 emissions, supporting community projects and bringing 
+      a positive change to the world, but if that’s not enough; you’ll look awesome doing it 
+      with our Reusable Bean Drop Cup in hand.</p>
+    <p>But if you need even more reasons, click here and we’ll show you all the things Bean Drop supports.</p>
+    <a href="{% url 'charity' %}"><button class="btn btn-outline-success" type="button" name="button">Giving back</button></a>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_cup_without_lid.png' %});background-size: 750px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Re-use or Recycle?</h2>
+    <h4>Both!</h4>
+    <p>Let’s do both, reuse our cups which are better for the environment, 
+      and then at the end of their lives, we take them to the recycling centers 
+      so you know they’re being correctly recycled.</p>
+    <h4 class="text-center mt-1">Did you know?</h4>
+    <p class="text-center" style="font-family: 'Georgia'; font-size: 80%">Only 2% of the UK’s recyclable paper cups were recycled in 2018, 98% went 
+      straight to landfill! Single use recyclable cups are hard to recycle, the UK 
+      only has 5 locations where this is possible. It’s time to swap single use for reusable cups!</p>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/stock_image_welcoming_barister.jpg' %});background-size: 600px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Which cafes use Bean Drop?</h2>
+    <p>Check out our Locations page to see where you can find a Bean Drop Station in your area.</p>
+    <a href="{% url 'blog-about' %}"><button class="btn btn-outline-success" type="button" name="button">Locations</button></a>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_station_outside.jpg' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Where can I drop off my Bean Drop Cups?</h2>
+    <p>Look out for our brightly coloured Bean Drop Stations around town.</p>
+    <p>We have Bean Drop stations located at all of your favourite cafes and in-between. Check out our location map here!</p>
+    <a href="{% url 'blog-about' %}"><button class="btn btn-outline-success" type="button" name="button">Locations</button></a>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/stock_image_bike_riding_happy.jpg' %});background-size: 700px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Are all Bean Drop Cups delivered by bicycle?</h2>
+    <p>Yep! We love cycling, it gets us outside, keeps us fit and reduces our carbon footprint.</p>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_office_cad_work.jpg' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>How can we as a business or cafe get involved with Bean Drop?</h2>
+    <p>We’re excited that you’re excited about Bean Drop! We want to bring Bean Drop to everyone, so lets chat!</p>
+    <a href="{% url 'contact_us' %}"><button class="btn btn-outline-success" type="button" name="button">Contact us</button></a>
+  </div>
+</div>
+
+<div class="text-center px-3 py-2 mb-4" style="background-color:white; border-radius:25px">
+  <p class="align-middle" style="font-family: 'Comfortaa'; font-size:200%">Have any other questions? Drop us an email or pop into one of our participating cafes</p>
+  <a href="{% url 'contact_us' %}"><button class="btn btn-outline-success" type="button" name="button">Contact us</button></a>
+</div>
+
+{% endblock content %}
+
+style="object-fit:cover; object-position: 50% 50%;

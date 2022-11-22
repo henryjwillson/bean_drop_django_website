@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <div class="content-section">
+    <form method="post">
+      {% csrf_token %}       <! Token required as part of additional security for django to protect from certain attacks >
+      <fieldset class = "form-group">
+        <legend class = "border-bottom mb-4">Link customer receipts to your account</legend>
+        <p>You can link any old order of bean drop cups to your account with the original receipt. To do so, input the customer QR-code number and your secret customer number in the boxes below.
+           <a class="text-muted ml-2"><a data-toggle="modal" data-target="#ReceiptHelpModal" href="{% url 'password_reset' %}">Help?</a></p>
+        {{ form|crispy }} <! reders form as paragraphs by using .as_p method     ----   Vertical line '|' provides us with a filter>
+      </fieldset>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-success" name="user_link_receipt_button">Link Receipt</button>
+        </div>
+    </form>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="ReceiptHelpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">How to find your customer details on your receipt</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"><p>
+          An example receipt is shown below and shows where you can find your customer details.
+        </p>
+        <p>
+          Your customer QR-code is highlighted in the <span style="color:green">green box</span>.
+        </p>
+        <p>
+          Your customer sectret code is highlighted in the <span style="color:blue">blue box</span>.
+        </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

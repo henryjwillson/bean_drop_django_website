@@ -1,0 +1,48 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center px-3 py-2 mb-4" style="background-color:#7BDCB5; border-radius:25px">
+  <p class="align-middle" style="font-family: 'Comfortaa'; font-size:200%">Bean Drop Locations</p>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_station_outside.jpg' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Bring Bean Drop to your local community!</h2>
+    <p>Love the concept of Bean Drop and want to bring it to your local community?</p>
+    <p>You can help bring Bean Drop to your local community by adding your name to our community map. 
+      By adding your name, we can help determine to best place to set up our next 
+      Bean Drop community, it also helps persuade your favourite cafes to start serving Bean Drop!</p>
+    <a href="{% url 'charity' %}"><button class="btn btn-outline-info" type="button" name="button">Sign the Map</button></a>
+  </div>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_office_cad_work.jpg' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-left align-middle align-items-center" style="vertical-align: middle; font-family: 'Comfortaa">
+    <h2>Become a Bean Drop Ambassador!</h2>
+    <p>Love the concept of Bean Drop and you want to do more?</p>
+    <p>Become a community ambassador and help spread the word! Our community ambassadors are our champions and make a real difference in building a sustainable future.</p>
+    <a href="{% url 'charity' %}"><button class="btn btn-outline-success" type="button" name="button">Become a Community Ambassador</button></a>
+  </div>
+</div>
+
+{% endblock content %}
+
+style="object-fit:cover; object-position: 50% 50%;

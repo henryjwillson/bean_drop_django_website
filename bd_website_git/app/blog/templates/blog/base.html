@@ -1,0 +1,134 @@
+{% load static %}
+{% load qr_code %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'blog/main.css' %}">
+
+    {% if title %}
+      <title>Django Blog - {{ title }}</title>
+    {% else %}
+      <title>Django Blog</title>
+    {% endif %}
+  </head>
+
+  <body class="bg-white" >
+    <div class="container">
+      <header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom fixed-top box-shadow">
+        <div class="my-0 mr-md-auto">
+          <a href="{% url 'blog-home' %}" class="font-weight-normal">
+            <img src="{% static 'blog/nav_bar_logo.png' %}" class="bi me-2 align-middle" width="80"></a>
+          <span class="fs-1 align-middle" style="font-family: 'biysk'; font-size:200%">Bean Drop</span>
+        </div>
+        <ul class="nav nav-pills "my-2 my-md-0 mr-md-3"">
+          <li class="nav-item"><a href="{% url 'blog-home' %}" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">About</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'blog-about' %}">Bean Drop</a>
+              <a class="dropdown-item" href="{% url 'charity' %}">Charity Work</a>
+              <a class="dropdown-item" href="{% url 'the-bean-drop-team' %}">The Team</a>
+              <a class="dropdown-item" href="{% url 'faqs' %}">FAQS</a>
+            </div>
+          </li>
+          {% if user.is_authenticated %}
+            {% if user.is_staff %}
+              <li class="nav-item"><a class="nav-link" href="{% url 'post-create' %}">New Post</a></li>
+            {% endif %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+          {% endif %}
+        </ul>
+      </header>
+    </div>
+
+    <main role="main" class="container pt-5">
+    <div class="row">
+      <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}
+      </div>
+
+      <div class="col-md-4">
+
+        {% if user.is_authenticated %}
+          <div class="content-section text-center">
+            <h3>YOUR UNIQUE CUSTOMER QR CODE</h3>
+            <div>{% qr_from_text user.profile.beandrop_social_user_uuid size="T" image_format="png" %}</div>
+            <a type="submit" class="btn btn-success" name="link_customer_reciepts_button" href="{% url 'link_customer_receipts' %}">+ LINK CUSTOMER RECIEPTS</a>
+          </div>
+        {% endif %}
+
+        <div class="content-section">
+          <h3><a href={% url 'blog-about' %}></a>What is Bean Drop?</h3>
+          <p class='text-muted'>Click hear to find out more about eco takeaway drink revolution.
+            <ul class="list-group">
+              <a href={% url 'blog-about' %}><li class="list-group-item list-group-item-light">About</li></a>
+              <a href={% url 'charity' %}><li class="list-group-item list-group-item-light">Charity Work</li></a>
+              <a href={% url 'blog-about' %}><li class="list-group-item list-group-item-light">Announcements</li></a>
+              <li class="list-group-item list-group-item-light">Calendars</li>
+              <a href={% url 'locations' %}><li class="list-group-item list-group-item-light">Locations</li></a>
+            </ul>
+          <div class="container text-center">
+            <div class="mt-3">
+              <a href="https://www.instagram.com/beandropcompany/"><img src="{% static 'blog\Instagram_Glyph_Gradient.png' %}" alt="" style="width:50px; height:50px"></a>
+            </div>
+          </div>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    </main>
+
+    <footer>
+       <div class="container-fluid bg-dark text-light mt-5 pt-5">
+           <div class="container py-5">
+             <div class="row">
+               <div class="col">
+                 <h4 class="text-light" >Navigation</h4>
+                 <ul class="list-group">
+                   <a style="color: white" href="{% url 'contact_us' %}">Contact us</a>
+                   <a style="color: white" href="{% url 'private_policy' %}">Private Policy</a>
+                   <a style="color: white" href="{% url 'private_policy' %}">Cookies</a>
+                 </ul>
+               </div>
+               <div class="col">
+                 <h4 class="text-light" >Our mobile App</h4>
+                 <div class="row px-3">
+                   <a href="https://www.apple.com/uk/app-store/"><img class="img-fluid pt-2" src="{% static 'blog\AppStoreBadge.svg' %}" alt=""></a>
+                   <a href="https://play.google.com/store/apps"><img class="img-fluid" src="{% static 'blog\googleplaybadge.png' %}"  alt="" style="height:57px; width: auto"></a>
+                 </div>
+               </div>
+             </div>
+
+           </div>
+           <div class="container text-center py-3">
+               <p style="font-size:12px">Copyright © 2022 All Rights Reserved.</p>
+           </div>
+       </div>
+   </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

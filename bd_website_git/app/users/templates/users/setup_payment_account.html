@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <div class="content-section">
+    <form method="post">
+      {% csrf_token %}       <! Token required as part of additional security for django to protect from certain attacks >
+        <legend class = "border-bottom mb-4">Setup your payment account with Stripe</legend>
+        <div class="border-bottom mb-4">
+          <p>Use our banking partner Stripe to setup your payment account. 
+            By setting up your account with Stripe we can refund your deposit and send the money straight into your bank account. 
+            Once you have completed the onboarding with Stripe return to our request refunds page to request your deposit refund.
+          </p>
+          <p>Press the 'Create/Update Stripe Account' button below to setup your account with <a href="https://stripe.com/gb/customers">Stripe</a></p>
+          <p class=""><span class="fst-italic text-secondary">Stripe Banking is a secure e-commerce platform registered with the Financial Services Authority</span></p>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-outline-info" name="create_update_stripe_account">Create/Update Stripe Account</button>
+        </div>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+
+  </script>
+
+
+{% endblock content %}

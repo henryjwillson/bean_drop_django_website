@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center px-3 py-2 mb-4" style="background-color:#7BDCB5; border-radius:25px">
+  <p class="align-middle" style="font-family: 'Comfortaa'; font-size:200%">The Bean Drop Team is a talented group of individuals committed to developing a sustainble future</p>
+</div>
+
+<div class="align-items-center text-center row py-2 mb-2 px-3" style="">
+  <div class="title-container text-center col">
+    <div class=" img-hover-zoom-blog-home-post" style="border-radius:25px; height:400px; max-width: 100%;">
+        <h2 class="text-light py-2 mb-2 " style="height:400px; max-width: 100%; border-radius:25px; background-image:url({% static 'blog/bean_drop_office_cad_work.jpg' %});background-size: 400px; background-position: 50%, 50%"></h2>
+        <div class="carousel-caption">
+          <p style="font-family: 'Comfortaa'; font-size:200%; color:white"><span></span></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col text-center align-middle align-items-center" style="vertical-align: middle">
+    <p>The Bean Drop Team comes from all walks of life, from engineers and artists, to finance and accounting. We're dreamers determined to help engineer a sustainable future for takeaway drinks.</p>
+    <p><strong>Fancy joining our team?</strong></p>
+    <p>Join our community leaders to help build our sustainable future in your community.</p>
+    <a href=""><button class="btn btn-outline-success" type="button" name="button">Find out more</button></a>
+  </div>
+</div>
+
+{% endblock content %}
+
+style="object-fit:cover; object-position: 50% 50%;

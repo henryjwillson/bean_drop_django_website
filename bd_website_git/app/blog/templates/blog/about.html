@@ -1,0 +1,37 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block content %}
+<div class="text-center">
+  <h1 style="font-family: 'biysk'; font-size:400%">refill . return . re-use</h1>
+  <h2 style="font-family: 'biysk'; font-size:175%">Bean Drop is the future of the circular economy in the takeaway beverage industry.</h2>
+  <figure class="zoom" style="background-image:url({% static 'blog/beandrop_lifecycle.jpg' %})"; onmousemove="zoom(event)">
+    <img class="img-fluid" src="{% static 'blog/beandrop_lifecycle.jpg' %}" alt="">
+  </figure>
+</div>
+<div class="">
+  <p>Bean drop is a revolution in the way we have our takeaway coffee. Customers
+    receive their coffee* in re-usable cups instead of a single-use
+    plastic-lined takeaway cups that most cafes currently offer. By using re-usable cups, customers can
+    return their cups once they are finished, reducing landfill waste, C02 emissions and water waste compared
+    to a single-use coffee cup.</p>
+    <p>Bean Drop will wash the cups so customer's don't have to;
+       combining the convenience of single-use coffee cups with the environmentally friendly nature of a re-usable cup.</p>
+    <figure class="text-center border-bottom border-top pt-3" style="vertical-align: middle">
+      <blockquote class="blockquote">
+        <p>It won't cost you a penny more and you'll be saving the environment!</p>
+      </blockquote>
+    </figure>
+
+    <p>Bean Drop can collect, clean and distribute coffee cups for the exact same price as single-use coffee cups!
+       As a customer you won't pay a penny extra for your cup of coffee! And whilst you enjoy your favourite coffee
+        in our uniquely identifiable reusable cups, you can be happy in the knowledge you've helped reduce CO2 emissions by 96%!
+         Infact even though we will wash the cups after every use, you will still reduce the total water usage of cups by 76%
+          when using a Bean Drop cup compared with a normal single use cup.</p>
+</div>
+
+<script src="{% static 'blog/img_zoom.js' %}">
+</script>
+
+{% endblock content %}
+
+  <img class="img-fluid" data-toggle="modal" data-target="#BeanDropLifeCycleModal" src="{% static 'blog/beandrop_lifecycle.jpg' %}" onmousemove="zoom(event)"alt="">
